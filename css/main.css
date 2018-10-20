@@ -1,0 +1,75 @@
+body {
+  font-family: 'Roboto',arial,sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline:none;
+ /* Set the size of the div element that contains the map */
+}
+
+nav {
+  display: flex;
+  padding: 10px 15px;
+  background: #e6e6e6;
+} 
+
+#questSearch {
+  flex-grow: 4;
+  border: none;
+  margin-right: 20px;
+  padding: 7px 5px;
+  background: transparent;
+  outline: none;
+  font-size: 24px;
+}
+
+#search, #addQuest {
+  flex-grow: 1;
+  border: none;
+  background: white;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+
+#filterbar {
+  height: 40px;
+  background: whitesmoke;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+#quester {
+  padding: 35px;
+  background: #e2e2e2;
+}
+
+#quester > div {
+  border: 1px solid #d4d4d4;
+  background: white;
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+
+#quester > div h1 {
+  padding: 5px 6px;
+  margin-bottom: 5px;
+  background: #dedede;
+  color: grey;
+}
+
+#quester > div p {
+  padding: 5px 15px;
+}
+
+#map {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+ }
+
+.featherlight textarea, .featherlight input[type='text'] {
+  resize:none;
+  width:100%;
+  padding: 6px;
+}

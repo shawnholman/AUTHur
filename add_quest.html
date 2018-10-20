@@ -1,0 +1,19 @@
+<div style='display: flex'>
+	<div id="map" style='flex-shrink: 10;'></div>
+	<div style='width: 300px;margin: 0 10px;'>
+		<h1 id='questName' contenteditable="true" style='margin-top: -10px;'>Quest Name..</h1>
+		<textarea id='questDescription' placeholder='Description..'></textarea>
+		<input type='text' placeholder='First Clue..' />
+		<div style="width: 100%;border-bottom: 2px dashed #e8e8e8;margin: 10px 0;"></div>
+
+		<div id='artifactAdder' style='height: 200px;margin-bottom: 5px;background: #f2f2f2;padding: 5px 10px; font-size: 13px;'>
+			<div style='text-align: center'>Place Artifact</div>
+		</div>
+
+		<input type='button' disabled="disabled" style="float:right" value='Submit' />
+	</div>
+</div>
+
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSJGrJcDUaD17ATmqJ4YFLyrfXnq0u460&callback=initMap"></script>
