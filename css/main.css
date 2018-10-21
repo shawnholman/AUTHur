@@ -13,7 +13,7 @@ body {
 nav {
   display: flex;
   padding: 10px 15px;
-  background: #e6e6e6;
+  background: #ffffff;
 } 
 
 ul {
@@ -56,13 +56,13 @@ td {
 }
 
 .button {
-  font-size: 30px;
-  background: #e6e6e6;
-  color: grey;
-  margin: -10px 0px;
-  padding: 42px;
-  border-right: 2px solid grey;
-  transition: 0.2s background, 0.2s color;
+    font-size: 30px;
+    background: #f9f9f9;
+    color: #9f9f9f;
+    margin: -10px 0px;
+    padding: 42px;
+    border-right: 2px solid #e3e3e3;
+    transition: 0.2s background, 0.2s color;
 }
 
 .button:last-child {
@@ -84,6 +84,18 @@ td {
 
 .button.logout:hover {
     color: #bb0303;
+}
+
+#logo {
+  font-family: 'Lato', sans-serif;
+  display: block;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    background: #f9f9f9;
+    font-family: 'Lato', sans-serif;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 10px 0;
 }
 
 #loader {

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
     <link href='css/icons.css' rel='stylesheet' />
     <link href='css/main.css' rel='stylesheet' />
     <link href='css/featherlight.css' rel='stylesheet' />
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
   </head>
   <body>
-    <header style='display:none'>
+    <div id='logo'><span class='beg' style='color:green'>A</span>RTH<span class='end' style='color:grey'>ur</span></div>
+    <header style='display:none; border-bottom: 1px solid #e9e9e9;'>
       <nav>
         <input id="questSearch" type='text' placeholder='Search Quests..' /> 
         <div class="button search"><strong class="icon-search"></strong></div> 
@@ -19,7 +21,6 @@
     <div id='firebaseui-auth-container'></div>
     <div id="loader"><img src="img/double-ring-loader.gif" /></div>
 
-    <img src='img/logo.png' style='display:block; margin: 0 auto;' />
     <section style='background: #e06b6b; border-color: #c45454'>
       <div class='column'>
         <div class='hori'>
