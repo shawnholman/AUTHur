@@ -16,6 +16,45 @@ nav {
   background: #e6e6e6;
 } 
 
+ul {
+  list-style: none;
+}
+
+section {
+    margin: 20px;
+    border-radius: 3px;
+    border: 2px solid;
+    display:none;
+}
+
+tr:nth-child(odd) {
+    background: #e4e4e4;
+    color: #6bace0;
+}
+
+td {
+  padding: 20px 0;
+}
+
+.column {
+  display: flex;
+}
+
+.column > div:not(.hori), .hori > div {
+  flex-grow: 1;
+  padding: 15px 15px;
+  margin: 10px 20px;
+  background: #fbfbfb;
+  border-radius: 3px;
+  height: fit-content;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12);
+}
+
+.hori {
+  display: flex;
+  flex-direction: column;
+}
+
 #questSearch {
   flex-grow: 4;
   border: none;
@@ -40,26 +79,24 @@ nav {
   border-bottom: 1px solid #e4e4e4;
 }
 
-#quester {
-  padding: 35px;
-  background: #e2e2e2;
+#quester > div {
+    max-height: 500px;
+    overflow-y: scroll;
 }
 
-#quester > div {
-  border: 1px solid #d4d4d4;
+#quester div > div {
   background: white;
   border-radius: 3px;
   margin-bottom: 30px;
 }
 
-#quester > div h1 {
+#quester div > div h1 {
   padding: 5px 6px;
   margin-bottom: 5px;
-  background: #dedede;
   color: grey;
 }
 
-#quester > div p {
+#quester div > div p {
   padding: 5px 15px;
 }
 
@@ -67,6 +104,21 @@ nav {
   height: 400px;  /* The height is 400 pixels */
   width: 100%;  /* The width is the width of the web page */
  }
+
+ #progress {
+    width: 150px;
+    height: 150px;
+    transform: translate(-10px, 10px);
+    margin: 0 auto;
+  }
+
+  #leaderboard {
+    text-align: center;
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 10px;
+    border-spacing: 0;
+  }
 
 .featherlight textarea, .featherlight input[type='text'] {
   resize:none;

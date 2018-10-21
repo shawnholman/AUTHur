@@ -4,7 +4,19 @@ let Quest = function () {
 
 
   this.addMarker = function (marker) {
-      marker.push(marker);
+      markers.push(marker);
+  }
+
+  this.getMarkers = function () {
+    return markers;
+  }
+
+  this.currentMarker = function () {
+    return markers[markers.length - 1];
+  }
+
+  this.currentMarkerCount = function () {
+    return markers.length;
   }
 }
 
@@ -46,10 +58,17 @@ function initMap() {
   placePositionMarker();
 
   map.addListener('click', function(e) {
-      let marker = placeMarker(e.latLng, map);
-      quest.addMarker(marker);
-      if (quest.markers.length == 0) {
-        $('#artifactAdder').html('Artifact 1');
+      let count = quest.currentMarkerCount();
+
+      if (count < 2 || $(`.artifact-clue[data-id="${count}"]`).val().trim() != '') {
+        let marker = placeMarker(e.latLng, map);
+        quest.addMarker(e.latLng);
+
+        if (count == 0) {
+          $('#artifactAdder').html('Artifact 1');
+        } else {
+          $('#artifactAdder').append(`<br><input type="text" class="artifact-clue" data-id="${count + 1}" placeholder="Clue" style="border: none;margin: 6px 2px;"><br> Artifact ` + (count+1));
+        }
       }
   });
 
