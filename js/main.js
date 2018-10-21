@@ -54,11 +54,9 @@ const Main = (function () {
     	Firebase: {
     		loadQuests: function () {
     			return firebaseGet("quests", function (quests) {
-    				for (let quest of quests) {
-    					if (quest != undefined) {
-	    					let html = app.Templates.make(app.Templates.questDisplay, quest);
-	    					$('#quester > div').append(html);
-	    				}
+    				for (let quest in quests) {
+    					let html = app.Templates.make(app.Templates.questDisplay, quests[quest]);
+	    				$('#quester > div').append(html);
     				}
     			});
     		},
@@ -160,10 +158,14 @@ const Main = (function () {
 				  	app.Firebase.loadLeaderboard()
 			  	];
 
+			  	$('header, #logout').show();
 			  	Promise.all(setup).then(function () {
-			  		$('section').fadeIn()
+			  		$('#loader').delay(100).fadeOut(250, function () {
+			  			$('section').fadeIn(600);
+			  		});
 			  	});
 			  } else {
+			  	$('#loader, #logout').hide();
 			  	// Initialize the FirebaseUI Widget using Firebase.
 			    var ui = new firebaseui.auth.AuthUI(firebase.auth());
 			    var uiConfig = {
