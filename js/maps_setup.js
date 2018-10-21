@@ -118,7 +118,7 @@ function initMap() {
     });
 
     quest.package().then(function () {
-      alert("submitted")
+      location.reload();
     })
   });
 }
